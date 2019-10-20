@@ -3,6 +3,8 @@ go:
 - 1.12.x
 env:
 - GO111MODULE=on
+before_install:
+  - go mod vendor
 script:
 - go build -mod=vendor .
 deploy:
