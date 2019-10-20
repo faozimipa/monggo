@@ -1,0 +1,13 @@
+language: go
+go:
+- 1.12.x
+env:
+- GO111MODULE=on
+script:
+- go build -mod=vendor .
+deploy:
+  provider: releases
+  skip_cleanup: true
+  on:
+    tags: true
+    repo: faozimipa/monggo
